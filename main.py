@@ -3,8 +3,6 @@ from flask import render_template
 import os
 import psutil
 import time
-import socket
-import re
 
 app = Flask(__name__)
 IP = "0.0.0.0"
