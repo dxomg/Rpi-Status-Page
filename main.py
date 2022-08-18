@@ -7,6 +7,8 @@ import socket
 import re
 
 app = Flask(__name__)
+IP = "0.0.0.0"
+Port = 80
 
 @app.route('/')
 def index():
@@ -43,4 +45,4 @@ def index():
 
     return render_template('index.html', cpu=cpu, ram=ram, ramfree=ramfree, tempout=tempout, voltsout=voltsout, ghzout=ghzout, net=net, uptime=uptime)
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=80)
+    app.run(host=IP, port=Port)
