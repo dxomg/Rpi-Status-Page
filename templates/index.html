@@ -1,0 +1,75 @@
+<title>
+	Rpi Status
+</title>
+<meta http-equiv='refresh' content='5' url='/'>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<div class=text-center>
+	<h1>
+		PI Status
+	</h1>
+	<h4>
+	Model: Rpi 4 (4 Gb)
+	</h4>
+</div>
+<br>
+<br>
+<div class=text-center>
+	<h4>
+		Usage
+	</h4>
+	<cpu>
+	Cpu: {{ cpu }}%
+	</cpu>
+<br>
+	<ram>
+	Ram: {{ ram }}%
+	</ram>
+<br>
+	<ramfree>
+	Free Ram: {{ ramfree }}%
+	</ramfree>
+<br>
+<br>
+	<h4>
+		Misc
+	</h4>
+        <Ghz>
+        Cpu Speed: {{ ghzout }} Ghz
+        </Ghz>
+<br>
+	<temp>
+	Temperature: {{ tempout }}ºC
+	</temp>
+<br>
+	<volts>
+	Volts:  {{ voltsout }}
+	</volts>
+<br>
+<br>
+	<h4>
+		Networking
+	</h4>
+	<netstat>
+	in / out | KB/s
+	</netstat>
+<br>
+	<net>
+	{{ net }}
+	</net>
+<br>
+<br>
+	<h4>
+		Uptime
+	</h4>
+	<uptime>
+	System Uptime:
+<br>
+	Online for {{ uptime }} Hours
+</div>
+<br>
+<br>
+<div class="blackquote text-center">
+	<credit>
+		Made By: Dxomg
+	</credit>
+</div>
