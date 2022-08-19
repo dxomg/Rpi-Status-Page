@@ -10,6 +10,11 @@ Port = 80
 
 @app.route('/')
 def index():
+    #Model
+    model1 = os.popen("cat /proc/cpuinfo | grep Model")
+    modelout1 = model1.readlines()
+    for modelout in modelout1:
+        modelout = modelout.strip("Model :"
     # Cpu & Ram
     cpu = psutil.cpu_percent()
     ram = psutil.virtual_memory().percent
