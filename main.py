@@ -47,6 +47,6 @@ def index():
         return time.time() - psutil.boot_time()
     uptime = (round(uptimeseconds() / 3600))
 
-    return render_template('index.html', cpu=cpu, ram=ram, ramfree=ramfree, tempout=tempout, voltsout=voltsout, wattsout=wattsout, ghzout=ghzout, net=net, uptime=uptime)
+    return render_template('index.html', modelout=modelout, cpu=cpu, ram=ram, ramfree=ramfree, tempout=tempout, voltsout=voltsout, wattsout=wattsout, ghzout=ghzout, net=net, uptime=uptime)
 if __name__ == '__main__':
     app.run(host=IP, port=Port)
