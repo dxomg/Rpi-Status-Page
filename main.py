@@ -24,7 +24,8 @@ def index():
     volts1 = os.popen("vcgencmd measure_volts")
     voltsout1 = volts1.readlines()
     for voltsout in voltsout1:
-        voltsout = voltsout.strip("\n volt=")
+        voltsout*3 = voltsout.strip("\n volt=")
+    watts = voltsout*3
     #Ghz
     ghz1 = os.popen('cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq')
     ghzout1 = ghz1.readlines()
@@ -41,6 +42,6 @@ def index():
         return time.time() - psutil.boot_time()
     uptime = (round(uptimeseconds() / 3600))
 
-    return render_template('index.html', cpu=cpu, ram=ram, ramfree=ramfree, tempout=tempout, voltsout=voltsout, ghzout=ghzout, net=net, uptime=uptime)
+    return render_template('index.html', cpu=cpu, ram=ram, ramfree=ramfree, tempout=tempout, voltsout=voltsout, watts=watts, ghzout=ghzout, net=net, uptime=uptime)
 if __name__ == '__main__':
     app.run(host=IP, port=Port)
